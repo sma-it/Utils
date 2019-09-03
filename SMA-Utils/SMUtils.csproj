@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SMA_Utils</RootNamespace>
+    <Description>SMA Utilities for Exercises and Tests</Description>
+    <Authors>Institute Sancta Maria</Authors>
+    <Title>SMA Utilities</Title>
+    <Owners>yvan vander sanden</Owners>
+    <Copyright>MIT Licence</Copyright>
+    <PackageProjectUrl>https://github.com/sma-it/Utils</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+  </ItemGroup>
+
+</Project>
