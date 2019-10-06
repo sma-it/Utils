@@ -19,7 +19,7 @@ namespace SMUtils
             options.Add(key, new Option { menuText = menuText, funcPtr = callback });
         }
 
-        public void Start()
+        public void Start(bool ShowOnlyOnce = false)
         {
             while (true)
             {
@@ -29,7 +29,11 @@ namespace SMUtils
                 {
                     Console.WriteLine("- " + option.Key + ": " + option.Value.menuText);
                 }
-                Console.WriteLine("- 0: Exit");
+
+                if(!ShowOnlyOnce)
+                {
+                    Console.WriteLine("- 0: Exit");
+                }
 
                 while (!Console.KeyAvailable)
                 {
@@ -43,9 +47,14 @@ namespace SMUtils
                 {
                     Console.Clear();
                     options[key.KeyChar].funcPtr();
-                    Console.WriteLine();
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadKey();
+
+                    if (!ShowOnlyOnce)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                    }
+                    else break;
                 }
 
             }

@@ -9,6 +9,7 @@
     <Owners>yvan vander sanden</Owners>
     <Copyright>MIT Licence</Copyright>
     <PackageProjectUrl>https://github.com/sma-it/Utils</PackageProjectUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
